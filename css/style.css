@@ -88,7 +88,7 @@ body {
   margin-top: 0.2vw;
   font-family: "Twinkle Star", "Stardew Valley", Georgia, "Times New Roman", Times, serif;
   font-size: 2.5vw;
-  color: rgba(255, 255, 255, 0.89);
+  color: white;
   height: 3.5vw;
   list-style: none;
   text-align: center;
@@ -96,9 +96,9 @@ body {
   margin-right: auto;
 }
 
-.primary-nav {
-  max-width: 50px;
-  max-height: 50px;
+.primary-nav img {
+  max-width: 75px;
+  max-height: 75px;
 }
 
 .menu_btn:hover {
@@ -122,7 +122,7 @@ body {
 }
 
 .sidebar {
-  height: 45vh;
+  height: 40vh;
   width: 6vw;
   position: fixed;
   right: 0px;
@@ -130,25 +130,46 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 3vw 0px 0px 3vw;
 }
+.sidebar .sideicons_div1 {
+  position: relative;
+  top: 1.8vw;
+  left: 0.55vw;
+  height: 5vw;
+  width: 5vw;
+  border-radius: 70%;
+}
+.sidebar .sideicons_div2 {
+  position: relative;
+  top: 2.8vw;
+  left: 0.85vw;
+  height: 5vw;
+  width: 5vw;
+  border-radius: 70%;
+}
+.sidebar .sideicons_div3 {
+  position: relative;
+  top: 4vw;
+  left: 0.75vw;
+  height: 5vw;
+  width: 5vw;
+  border-radius: 50%;
+}
+.sidebar .sideicons_div1:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.sidebar .sideicons_div2:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.sidebar .sideicons_div3:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
 .sidebar .side_icons {
   height: 5vw;
 }
-.sidebar .kitties {
-  position: relative;
-  top: 1.8vw;
-  left: 0.75vw;
-}
-.sidebar .puppies {
-  position: relative;
-  top: 2.8vw;
-  left: 1.2vw;
-}
 .sidebar .kids {
-  position: relative;
-  top: 4.7vw;
-  left: 0.75vw;
   width: 5vw;
   height: auto;
+  margin-top: 1vw;
 }
 
 .mochi {
@@ -161,10 +182,10 @@ body {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.8);
+    transform: scale(1.3);
   }
   100% {
-    transform: translatey(1.5);
+    transform: scale(1);
   }
 }
 @keyframes scale2 {
