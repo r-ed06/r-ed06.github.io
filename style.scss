@@ -114,6 +114,11 @@ body {
   margin-right: auto;
 }
 
+.primary-nav {
+  max-width: 50px;
+  max-height: 50px;
+}
+
 .menu_btn:hover {
   color: #00d5aa;
   animation: scale2 3s ease-in-out infinite;
