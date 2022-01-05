@@ -15,11 +15,6 @@
       format("svg");
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 /* FONTS : 
 
 font-family: 'Bebas Neue', cursive;
@@ -81,9 +76,10 @@ font-family: 'Zilla Slab Highlight', cursive;
   );
 
   --h1_fontsize: clamp(2.8rem, 3.5vw, 4.5vw);
-  --h2_fontsize: clamp(2rem, 3vw, 4rem);
+  --h2_fontsize: clamp(2.8rem, 3vw, 4.5rem);
   --h3_fontsize: clamp(1.8rem, 2.5vw, 3.5vw);
   --h4_fontsize: clamp(4em, 7vw, 9vw);
+  --h5_fontsize: clamp(2.2rem, 4.8vw, 5.5vw);
   --p_fontsize: clamp(1.2rem, 1.5vw, 2rem);
 }
 
@@ -95,6 +91,13 @@ body {
   background-attachment: fixed;
   background-position: center center;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ########################## NAVIGATION ########################## */
 
 .primary-nav {
   background-color: #007dca;
@@ -127,6 +130,8 @@ body {
 .container {
   position: fixed;
   z-index: 999;
+  width: 100% !important;
+  margin-top: 0;
 }
 
 .flex {
@@ -134,13 +139,8 @@ body {
   gap: var(--gap, 0vw);
 }
 
-.container {
-  width: 100% !important;
-  margin-top: 0;
-}
-
 .sidebar {
-  height: 40vh;
+  height: 20.5vw;
   width: 6vw;
   position: fixed;
   right: 0px;
@@ -175,16 +175,12 @@ body {
     border-radius: 50%;
   }
 
-  .sideicons_div1:hover {
+  .sideicons:hover {
     background-color: rgba(255, 255, 255, 0.2);
   }
 
-  .sideicons_div2:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-
-  .sideicons_div3:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+  .side_icons:hover {
+    animation: scale1 1.1s ease-in infinite;
   }
 
   .side_icons {
@@ -208,7 +204,7 @@ body {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.25);
+    transform: scale(1.12);
   }
   100% {
     transform: scale(1);
@@ -220,7 +216,7 @@ body {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.4);
+    transform: scale(1.17);
   }
   100% {
     transform: scale(1);
@@ -228,7 +224,7 @@ body {
 }
 
 .mochi:hover {
-  animation: scale1 2s ease-in;
+  animation: scale1 2s ease-in infinite;
 }
 
 .mochi2 {
@@ -318,7 +314,7 @@ body {
   font-family: "Twinkle Star", "The Nautigal", "Tangerine", "Inspiration",
     "Just Another Hand", "Leckerli One", "Parisienne", "Pacifico",
     "Stardew Valley", "Dancing Script", Georgia, "Times New Roman", Times, serif;
-  font-size: 4.8vw;
+  font-size: var(--h5_fontsize);
   text-align: center;
   margin-top: 0vw;
   text-shadow: 2px 2px 3px black;
@@ -382,7 +378,6 @@ body {
 .content-box h4 {
   font-family: "Twinkle Star", "Chewy", "Bebas Neue", "Dancing Script", Georgia,
     "Times New Roman", Times, serif;
-  text-transform: capitalize;
   text-align: center;
   font-size: var(--h4_fontsize);
   padding: 2vw 0vw 2vw 0px;
@@ -398,11 +393,10 @@ body {
   text-shadow: 7px 2px 1px white;
 }
 
-.content-box p {
+.p_intro {
   width: 70%;
   max-width: 1000px;
   margin: 1vw auto 2vw;
-  text-align: justify;
   font-size: var(--p_fontsize);
   text-shadow: 2px 1px 2px black;
 }
@@ -412,4 +406,44 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+/* ################################ MEDIA QUERIES ################################ */
+
+@media (max-width: 1350px) and (min-width: 1000px) {
+  .p_intro {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    display: none;
+  }
+
+  .sashenka {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5vw;
+    min-width: 52vw;
+    max-width: 68vw;
+  }
+
+  .sashenkatitle {
+    font-size: 7.2vw;
+  }
+
+  .p_intro {
+    width: 90%;
+  }
+
+  .nums-box {
+    width: 90vw;
+    margin-left: 1vw;
+  }
+
+  .sidebar {
+    width: 8vw;
+    height: 27vw;
+  }
 }
