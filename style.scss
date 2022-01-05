@@ -54,7 +54,7 @@ font-family: 'Zilla Slab Highlight', cursive;
   --gradient2: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
 
   --gradient3: linear-gradient(
-    to right,
+    85deg,
     #43e97b,
     #00d5aa,
     #00bcd2,
@@ -68,18 +68,22 @@ font-family: 'Zilla Slab Highlight', cursive;
   --gradient5: linear-gradient(
     45deg,
     #000000,
+    #000000,
+    #000000,
     #303030,
     #5e5e5e,
     #919191,
     #c6c6c6,
     #e5e5e5,
+    white,
+    white,
     white
   );
 
   --h1_fontsize: clamp(2.8rem, 3.5vw, 4.5vw);
   --h2_fontsize: clamp(2rem, 3vw, 4rem);
   --h3_fontsize: clamp(1.8rem, 2.5vw, 3.5vw);
-  --h4_fontsize: clamp(9vw, 11vw, 13vw);
+  --h4_fontsize: clamp(4em, 7vw, 9vw);
   --p_fontsize: clamp(1.2rem, 1.5vw, 2rem);
 }
 
@@ -110,6 +114,11 @@ body {
   margin-right: auto;
 }
 
+.menu_btn:hover {
+  color: #00d5aa;
+  animation: scale2 3s ease-in-out infinite;
+}
+
 .container {
   position: fixed;
   z-index: 999;
@@ -126,8 +135,8 @@ body {
 }
 
 .sidebar {
-  height: 30vh;
-  width: 4.5vw;
+  height: 45vh;
+  width: 6vw;
   position: fixed;
   right: 0px;
   top: 15vh;
@@ -135,7 +144,7 @@ body {
   border-radius: 3vw 0px 0px 3vw;
 
   .side_icons {
-    height: 3vw;
+    height: 5vw;
   }
 
   .kitties {
@@ -147,14 +156,54 @@ body {
   .puppies {
     position: relative;
     top: 2.8vw;
-    left: 0.75vw;
+    left: 1.2vw;
   }
 
   .kids {
     position: relative;
-    top: 3.8vw;
+    top: 4.7vw;
     left: 0.75vw;
+    width: 5vw;
+    height: auto;
   }
+}
+
+.mochi {
+  margin-top: 0.3vw;
+  height: 3.5vw;
+}
+
+@keyframes scale1 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.8);
+  }
+  100% {
+    transform: translatey(1.5);
+  }
+}
+
+@keyframes scale2 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.mochi:hover {
+  animation: scale1 2s ease-in;
+}
+
+.mochi2 {
+  margin-top: 0.9vw;
+  height: 2.8vw;
 }
 
 @keyframes float {
@@ -258,7 +307,8 @@ body {
 }
 
 .spotify-player {
-  max-width: 500px;
+  width: 35vw;
+  max-width: 700px;
   margin: 1.5vw auto 1.5vw;
 }
 
@@ -299,21 +349,22 @@ body {
 }
 
 .content-box h4 {
-  font-family: "Chewy", "Bebas Neue", "Twinkle Star", "Dancing Script", Georgia,
+  font-family: "Twinkle Star", "Chewy", "Bebas Neue", "Dancing Script", Georgia,
     "Times New Roman", Times, serif;
   text-transform: capitalize;
   text-align: center;
   font-size: var(--h4_fontsize);
   padding: 2vw 0vw 2vw 0px;
   border-top: white 3px solid;
-  background-image: var(--gradient5);
-  background-size: 400%;
+  background-image: var(--gradient3);
+  background-size: 600%;
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   animation: sashenka-animation 3s infinite alternate;
+  text-shadow: 7px 2px 1px white;
 }
 
 .content-box p {
